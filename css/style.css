@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Poppins:100,200,300,400,500,600,700,800,900|Roboto:100,300,400,500,700,900&display=swap');
+
+@charset "utf-8";
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    display: flex;
+}
+footer #datetime {
+    padding: 25px;
+}
+
+footer #datetime h1 {
+    color: #fff;
+    font-size: 60px;
+    padding-bottom: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+footer #datetime p {
+    color: #fff;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    height: 100vh;
+    background: #000;
+}
