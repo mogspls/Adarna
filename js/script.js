@@ -1,96 +1,59 @@
 $(document).ready(function(){
+    // Once the whole document has loaded, load the rest of the script
     
+    /*
+    =================== TIME ======================
+    */
     // Display time using MomentJS
     var datetime = null,
         date = null;
-    
-    var update = function () {
-        date = moment(new Date())
+    var update = function(){
+        date = moment(new Date());
         datetime.html(date.format('h:mm:ss a'));
-    };
+    }
     
-    datetime = $('#displayMoment')
+    // Append the variable to #displayMoment
+    datetime = $("#displayMoment")
     update();
     setInterval(update, 1000);
-
-
+    
     // instantiate a JavaScript Date object
-    var NowDate = new moment();
+    var today = new moment();
     // display value of Date object in #displayJsDate div
     var eDisplayDate = document.getElementById('displayJsDate');
-    eDisplayDate.innerHTML = NowDate.format("MMMM DD, YYYY");
+    eDisplayDate.innerHTML = today.format("MMMM DD, YYYY");
     update();
     setInterval(update, 1000);
     
-    // Randomize the background gradient
-    var colors = [
-        "purple",
-        "purpleSky",
-        "kyeMeh",
-        "orangeCoral",
-        "roseColored",
-        "fireWatch",
-    ]
+    /*
+    ================= GRADIENTS ===================
+    */
     
-    // Write the class written on the document.
-    var randomIndex = Math.floor(Math.random() * colors.length);
-    $("main").addClass(colors[randomIndex]);
-    //
-
-    // Check if the attribute has a class
+    // Pull random gradients from gradients.json
+    $.getJSON("gradients.json", function(data){
+        var kulay = data[Math.floor(Math.random() * data.length)];
+        $("main").addClass(kulay.name);
+        $("#colorName").append(kulay.name);
+        $("main").attr('style', "background: linear-gradient(45deg," + kulay.colors + ")");
+        
+        
+        var hex = '';
+        $.each( kulay.colors, function( key, val ) {
+            hex += '<span style="background:' + val + '">' + '</span>';
+        });
+        $("#hex").append(hex);
+    });
     
-    // Purple Hue
-    if ($("main").hasClass("purple")){
-        $("#hex").append(
-        "<span style='background: #6E48AA'></span>" +
-        "<span style='background: #9D50BB'></span>" +
-        "<span style='bac kground: #B176CC'></span"
-        );
-        $("#colorName").append("<p class='colorname'>Purple Hue</p>");
-    }
+    //Pull random spit facts YO
+    $.getJSON("https://uselessfacts.jsph.pl/random.json?language=en", function(datum){
+        var spitfact = datum.text;
+        var src_url = datum.source_url;
+        var src = datum.source;
+        
+        $("q em").append(spitfact);
+        $("p#source").append("<a href='" + src_url +"'>" + src + "</a>");
+    });
     
-    // Purple Sky
-    if ($("main").hasClass("purpleSky")){
-        $("#hex").append(
-        "<span style='background: #4568DC'></span>" +
-        "<span style='background: ##B06AB3'></span>" 
-        );
-        $("#colorName").append("<p class='colorname'>Purple Sky</p>");
-    }
     
-    // Kye Meh
-    if ($("main").hasClass("kyeMeh")){
-        $("#hex").append(
-        "<span style='background: #11998e'></span>" +
-        "<span style='background: #38ef7d'></span>" 
-        );
-        $("#colorName").append("<p class='colorname'>Kye Meh</p>");
-    }
     
-    // Orange Coral
-    if ($("main").hasClass("orangeCoral")){
-        $("#hex").append(
-        "<span style='background: #ff9966'></span>" +
-        "<span style='background: #ff5e62'></span>"
-        );
-        $("#colorName").append("<p class='colorname'>Orange Coral</p>");
-    }
-    
-    // Rose Colored
-    if ($("main").hasClass("roseColored")){
-        $("#hex").append(
-        "<span style='background: #E8CBC0'></span>" +
-        "<span style='background: #636FA4'></span>"
-        );
-        $("#colorName").append("<p class='colorname'>Rose Colored</p>");
-    }
-    
-    // Firewatch
-    if ($("main").hasClass("fireWatch")){
-        $("#hex").append(
-        "<span style='background: #cb2d3e'></span>" +
-        "<span style='background: #ef473a'></span>"
-        );
-        $("#colorName").append("<p class='colorname'>Firewatch</p>");
-    }
 });

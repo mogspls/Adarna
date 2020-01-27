@@ -82,24 +82,68 @@ div#hex p.colorname {
     justify-content: flex-end;
     width: 100%;
 }
-
 div#colorName {
     padding: 5px;
-    color: #fff;
 }
-#spitfact {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    animation: fadeIn forwards 0.5s;
-    opacity: 0;
-    animation-delay: 1.25s;
-    text-align: center;
+
+/* Background colors */
+
+/* Purple Hue*/
+main.purple {
+    background: linear-gradient(20deg, #6e48aa, #9d50bb, #b176cc 100%);
 }
-#spitfact q {
-    font-size: 24px;
-    font-weight: 100;
-    color: #fff;
-    text-align: center;
+
+/* Purple Sky */
+main.purpleSky {
+    background: linear-gradient(20deg, #4568DC, #B06AB3);
+}
+
+/* Kye Meh */
+main.kyeMeh {
+    background: linear-gradient(20deg, #8360c3, #2ebf91);
+}
+
+/* Orange Coral */
+main.orangeCoral {
+    background: linear-gradient(20deg, #ff5e62, #ff9966);
+}
+
+/* Rose Colored */
+main.roseColored {
+    background: linear-gradient(20deg, #636FA4, #E8CBC0);
+}
+
+/* Firewatch */
+main.fireWatch {
+    background: linear-gradient(20deg, #cb2d3e, #ef473a);
+}
+
+/* Expresso */
+main.expresso {
+    background: linear-gradient(20deg, #ad5389, #3c1053);
+}
+
+/* Slight Ocean View */
+main.expresso {
+    background: linear-gradient(20deg, #3f2b96, #a8c0ff);
+}
+
+/* Relaxing Red */
+main.relaxingRed {
+    background: linear-gradient(20deg, #b20a2c, #fffbd5);
+}
+
+/* Pacific Dream */
+main.pacificDream {
+    background: linear-gradient(20deg, #0f3443, #34e89e);
+}
+
+/* Pacific Dream */
+main.royal {
+    background: linear-gradient(20deg, #141E30, #243B55);
+}
+
+/* Pacific Dream */
+main.dusk {
+    background: linear-gradient(20deg, #2C3E50, #243B55);
 }

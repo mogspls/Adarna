@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "kontor",
+    "name": "Adarna",
     "version": "0.1",
-    "description": "Replace new tab with a more personal weather, time recorder, and  weather update.",
+    "description": "Fills up your new tab with beautiful color gradients from uigradients.com and spits out random facts to make your day each time you open up a new tab.",
     
     "chrome_url_overrides": {
         "newtab": "index.html"
