@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "kontor",
     "version": "0.1",
-    "description": "A highly customizable homepage where freelancers may time-in and time-out.",
+    "description": "Replace new tab with a more personal weather, time recorder, and  weather update.",
     
     "chrome_url_overrides": {
         "newtab": "index.html"

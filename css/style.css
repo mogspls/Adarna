@@ -12,8 +12,10 @@ footer {
     user-select: none;
     display: flex;
 }
+
 footer #datetime {
     padding: 25px;
+    width: 400px;
 }
 
 footer #datetime h1 {
@@ -22,14 +24,96 @@ footer #datetime h1 {
     padding-bottom: 0px;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
+    opacity: 0;
+    transform: translateY(25%);
+    animation: 0.5s fadeUp forwards;
+    animation-delay: 0.25s;
 }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25%);}
+    to { opacity: 1; transform: translateY(0%); }
+}
+
 footer #datetime p {
     color: #fff;
-    font-weight: 100;
+    font-weight: 300;
     font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    transform: translateY(-10%);
+    animation: fadeIn forwards 0.5s;
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 main {
     height: 100vh;
-    background: #000;
+    width: 100%;
+    position: fixed;
+}
+
+div#hex {
+    display: flex;
+}
+
+div#hex span {
+    margin: 5px;
+    display: block;
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+    border: #fff 2px solid;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+div#hex span:hover {
+    border: #fff 5px solid;
+    transition: 0.2s;
+}
+
+div#hex p.colorname {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+div#colorName {
+    padding: 5px;
+}
+
+/* Background colors */
+
+/* Purple */
+main.purple {
+    background: linear-gradient(20deg, #6e48aa, #9d50bb, #b176cc 100%);
+}
+
+/* Purple Sky */
+main.purpleSky {
+    background: linear-gradient(20deg, #4568DC, #B06AB3);
+}
+
+/* Kye Meh */
+main.kyeMeh {
+    background: linear-gradient(20deg, #11998e, #38ef7d);
+}
+
+/* Orange Coral */
+main.orangeCoral {
+    background: linear-gradient(20deg,#ff9966, #ff5e62);
+}
+
+/* Rose Colored */
+main.roseColored {
+    background: linear-gradient(20deg,#E8CBC0, #636FA4);
+}
+
+/* Firewatch */
+main.fireWatch {
+    background: linear-gradient(20deg,#cb2d3e, #ef473a);
 }
