@@ -3,6 +3,10 @@ Adarna
 
 Adarna is a personal dashboard that provides randomly generated gradients from [UI-Gradients](https://uigradients.com), which shows the color palette and also spits out random facts everytime you open a new tab.
 
+Note
+----
+Please be reminded that this extension is still in its Alpha Stage
+
 # Installation
 
 1. Download the zip file, and unzip it to your desktop
