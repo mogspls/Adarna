@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Adarna",
     "version": "1.0",
-    "description": "Fills up your new tab with beautiful color gradients from uigradients.com and spits out random facts to make your day each time you open up a new tab.",
+    "description": "Fills up your new tab with color gradients from uigradients.com and displays random facts each time you open up a new tab.",
     
     "chrome_url_overrides": {
         "newtab": "index.html"
