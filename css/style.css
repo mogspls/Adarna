@@ -28,6 +28,7 @@ footer #datetime h1 {
     transform: translateY(25%);
     animation: 0.5s fadeUp forwards;
     animation-delay: 0.25s;
+    text-shadow: 1px 1px 10px #000;
 }
 
 @keyframes fadeUp {
@@ -43,6 +44,7 @@ footer #datetime p#displayJsDate {
     transform: translateY(-10%);
     animation: fadeIn forwards 0.5s;
     animation-delay: 1s;
+    text-shadow: 1px 1px 10px #000;
 }
 
 @keyframes fadeIn {
@@ -70,6 +72,7 @@ div#hex span {
     transition: 0.2s;
     cursor: pointer;
     position: relative;
+    box-shadow: 1px 1px 50px #333;
 }
 
 div#hex span:hover {
@@ -132,6 +135,7 @@ div#hex p.colorname {
 div#colorName {
     padding: 5px;
     color: #fff;
+    text-shadow: 1px 1px 10px #000;
 }
 
 #spitfact {
@@ -143,6 +147,7 @@ div#colorName {
     opacity: 0;
     animation-delay: 1.25s;
     text-align: center;
+    text-shadow: 1px 1px 10px #000;
 }
 #spitfact q {
     font-size: 24px;

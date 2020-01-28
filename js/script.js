@@ -68,6 +68,7 @@ $(document).ready(function(){
     ================= SPIT FACTS ===================
     */
     
+    
     // Pull random spit facts YO
     $.getJSON("https://uselessfacts.jsph.pl/random.json?language=en", function(datum){
         var spitfact = datum.text;
@@ -76,6 +77,11 @@ $(document).ready(function(){
         
         $("q em").append(spitfact);
     });
+    
+    
+    /*
+    ================= 8 BALL ===================
+    */
     
     
 });
