@@ -8,14 +8,14 @@ footer {
     bottom: 0;
     width: 100%;
     background: transparent;
-    -webkit-user-select: none;
-    user-select: none;
     display: flex;
 }
 
 footer #datetime {
     padding: 25px;
     width: 400px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 footer #datetime h1 {
@@ -35,7 +35,7 @@ footer #datetime h1 {
     to { opacity: 1; transform: translateY(0%); }
 }
 
-footer #datetime p {
+footer #datetime p#displayJsDate {
     color: #fff;
     font-weight: 300;
     font-family: 'Poppins', sans-serif;
@@ -69,11 +69,57 @@ div#hex span {
     border: #fff 2px solid;
     transition: 0.2s;
     cursor: pointer;
+    position: relative;
 }
 
 div#hex span:hover {
     border: #fff 5px solid;
     transition: 0.2s;
+}
+
+div#hex span p {
+    position: absolute;
+    top: 0;
+    animation: none;
+    opacity: 1;
+    background: #000;
+    padding: 10px;
+    transform: translate(-50%,-150%);
+    left: 50%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 70px;
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+    text-align: center;
+}
+
+div#hex span p::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+}
+
+
+div#hex span input.tooltip{
+    background: transparent;
+    opacity: 0;
+    cursor: pointer;
+    width: 5px;
+}
+
+div#hex span:hover p {
+    opacity: 1;
+    transition: 0.3s;
+    color: #fff;
 }
 
 div#hex p.colorname {
