@@ -1,10 +1,21 @@
 {
     "manifest_version": 2,
     "name": "Adarna",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "Fills up your new tab with color gradients from uigradients.com and displays random facts each time you open up a new tab.",
-    
+    "icons": { "128" : "images/icon.png"},
+    "browser_action": {
+        "default_icon": "images/icon.png"
+    },
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs",
+        "background"
+    ],
     "chrome_url_overrides": {
-        "newtab": "index.html"
+        "newtab": "adarna.html"
     }
 }
