@@ -70,13 +70,15 @@ $(document).ready(function(){
     
     
     // Pull random spit facts YO
-    $.getJSON("https://uselessfacts.jsph.pl/random.json?language=en", function(datum){
-        var spitfact = datum.text;
-        var src_url = datum.source_url;
-        var src = datum.source;
-        
-        $("q em").append(spitfact);
-    });
+//    $.getJSON("https://uselessfacts.jsph.pl/random.json?language=en", function(datum){
+//        var spitfact = datum.text;
+//        var src_url = datum.source_url;
+//        var src = datum.source;
+//        
+//        $("q em").append(spitfact);
+//    });
+
+    $("#spitfact").append("<p>We've run into a little trouble about the facts. <br>Please check again another time!</p>");
     
     
     /*

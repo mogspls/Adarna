@@ -1,8 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Poppins:100,200,300,400,500,600,700,800,900|Roboto:100,300,400,500,700,900&display=swap');
+@font-face {
+    src: 'fonts/Poppins-Regular.ttf';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+@font-face {
+    src: 'fonts/Poppins-ExtraLight.ttf';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+@font-face {
+    src: 'fonts/Poppins-Thin.ttf';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
 
 @charset "utf-8";
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
+p { font-family: 'Poppins', sans-serif; color: #fff; text-shadow: 1px 1px 10px #000; font-size: 24px; }
 footer {
     position: fixed;
     bottom: 0;
@@ -23,7 +37,7 @@ footer #datetime h1 {
     font-size: 60px;
     padding-bottom: 0px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     opacity: 0;
     transform: translateY(25%);
     animation: 0.5s fadeUp forwards;
