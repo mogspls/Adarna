@@ -59,7 +59,20 @@ $(document).ready(function(){
             setTimeout(function() {
             $this.text(originalText)
             }, 1000);
+        });
+        
+        // Copy to clipboard function
+        $("#hex span").click(function(){
+            $(this).closest("#hex span").children("input.tooltip").select();
+            document.execCommand("copy");
 
+            // Change back after 1 second
+            var $this = $(this).closest("#hex span").children("p");
+            var originalText = $this.text();
+            $this.text('Copied!');
+            setTimeout(function() {
+            $this.text(originalText)
+            }, 1000);
         });
     });
     
@@ -68,20 +81,9 @@ $(document).ready(function(){
     ================= SPIT FACTS ===================
     */
     
-    
     // Pull random spit facts YO
-    $.getJSON("https://uselessfacts.jsph.pl/random.json?language=en", function(datum){
-        var spitfact = datum.text;
-        var src_url = datum.source_url;
-        var src = datum.source;
-        
-        $("q em").append(spitfact);
-    });
-    
-    
-    /*
-    ================= 8 BALL ===================
-    */
-    
-    
+    $.getJSON("randomfacts.json", function(fact){
+        var spitfact = fact.fact;
+        $("q").append(spitfact);
+    })
 });
