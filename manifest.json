@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Adarna, Random Gradients and facts on new tab",
     "short_name" : "Adarna",
-    "version": "1.0.3",
+    "version": "2.0.0",
     "description": "Fills up your new tab with color gradients from uigradients.com and displays random facts each time you open up a new tab.",
     "icons": { "128" : "images/icon.png"},
     "browser_action": {
