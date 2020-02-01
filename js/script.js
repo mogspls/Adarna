@@ -82,8 +82,25 @@ $(document).ready(function(){
     */
     
     // Pull random spit facts YO
-    $.getJSON("randomfacts.json", function(fact){
+//    $.getJSON("randomfacts.json", function(fact){
+//        var spitfact = fact.fact;
+//        $("q").append(spitfact);
+//    });
+    $.getJSON("randomfacts.json", function(datum){
+        var fact = datum[Math.floor(Math.random() * datum.length)];
+        
         var spitfact = fact.fact;
-        $("q").append(spitfact);
-    })
+        var id = fact.id;
+        var src = fact.src_url;
+        
+        $("em").append(spitfact);
+        $("#link").append("<a href='" + src +"' target='_blank'>" + "<img src='images/link-button.svg' id='src'>" + "</a>");
+    });
+
+    
+    /*
+    ================= 8 BALL ===================
+    */
+    
+
 });

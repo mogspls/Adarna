@@ -1,8 +1,53 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Poppins:100,200,300,400,500,600,700,800,900|Roboto:100,300,400,500,700,900&display=swap');
+@font-face {
+    src: url('fonts/WorkSans-Black.ttf');
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 900;
+}
+@font-face {
+    src: url('fonts/WorkSans-ExtraBold.ttf');
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 800;
+}
+@font-face {
+    src: url('fonts/WorkSans-Bold.ttf');
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 700;
+}
+@font-face {
+    src: url('fonts/WorkSans-SemiBold.ttf');
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 600;
+}
+@font-face {
+    src: url('fonts/WorkSans-Medium.ttf');
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 500;
+}
+@font-face {
+    src: url('fonts/WorkSans-Regular.ttf');
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 400;
+}
+@font-face {
+    src: url('fonts/WorkSans-Light.ttf');
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 300;
+}
+@font-face {
+    src: url('fonts/WorkSans-ExtraLight.ttf');
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 200;
+}
+@font-face {
+    src: 'fonts/WorkSans-Thin.ttf';
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 100;
+}
+
 
 @charset "utf-8";
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
+p { font-family: 'WorkSans', sans-serif; color: #fff; text-shadow: 1px 1px 10px #000; font-size: 24px; }
 footer {
     position: fixed;
     bottom: 0;
@@ -22,8 +67,8 @@ footer #datetime h1 {
     color: #fff;
     font-size: 60px;
     padding-bottom: 0px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 200;
     opacity: 0;
     transform: translateY(25%);
     animation: 0.5s fadeUp forwards;
@@ -38,9 +83,10 @@ footer #datetime h1 {
 
 footer #datetime p#displayJsDate {
     color: #fff;
-    font-weight: 300;
-    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-family: 'WorkSans', sans-serif;
     opacity: 0;
+    font-size: 12px;
     transform: translateY(-10%);
     animation: fadeIn forwards 0.5s;
     animation-delay: 1s;
@@ -72,7 +118,7 @@ div#hex span {
     transition: 0.2s;
     cursor: pointer;
     position: relative;
-    box-shadow: 1px 1px 50px #333;
+    box-shadow: 1px 1px 0px #333;
 }
 
 div#hex span:hover {
@@ -97,6 +143,7 @@ div#hex span p {
     user-select: none;
     -webkit-user-select: none;
     text-align: center;
+    font-size: 12px;
 }
 
 div#hex span p::after {
@@ -136,11 +183,13 @@ div#colorName {
     padding: 5px;
     color: #fff;
     text-shadow: 1px 1px 10px #000;
+    font-family: 'WorkSans', sans-serif;
+    font-weight: 100;
 }
 
 #spitfact {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
     animation: fadeIn forwards 0.5s;
@@ -152,6 +201,42 @@ div#colorName {
 #spitfact q {
     font-size: 24px;
     font-weight: 100;
+    font-family: 'WorkSans', sans-serif;
     color: #fff;
-    text-align: center;
+}
+div#link a {
+    color: #fff;
+    display: block;
+    padding: 3px;
+    box-shadow: 1px 1px 50px rgba(0,0,0,0.4);
+    border-radius: 100px;
+    background: rgba(255,255,255,0.2);
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+    user-select: none;
+    animation: fadeUp forwards 0.5s;
+    opacity: 0;
+    animation-delay: 1.25s;
+}
+div#link a:hover{
+    color: #fff;
+    display: block;
+    padding: 3px;
+    transition: 0.3s;
+    background: rgba(255,255,255,0.4);
+    height: 50px;
+    user-select: none;
+    width: 50px;
+}
+div#link {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+div#link #src {
+    height: 100%;
+    width: 100%;
+    padding: 7.5px
 }
