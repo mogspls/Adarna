@@ -5,7 +5,7 @@ Adarna is a personal dashboard that provides randomly generated gradients from [
 
 Note
 ----
-Please be reminded that this extension is still in its Alpha Stage
+*This is now a discontinued project. It is now archived. 
 
 # Installation
 
